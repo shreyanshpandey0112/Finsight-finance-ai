@@ -1,0 +1,6 @@
+{
+  "name": "FinSight AI — Personal Finance & Expense Predictor",
+  "description": "A modern personal finance dashboard with expense tracking, budgeting, Linear Regression AI forecasting, wealth simulation, and student-friendly BCA architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
