@@ -212,8 +212,8 @@ if not st.session_state.user:
     with auth_tab2:
         st.subheader("Register a New FinSight Account")
         with st.form("register_form"):
-            reg_name = st.text_input("Full Name", placeholder="e.g., Aryan Sharma")
-            reg_email = st.text_input("Email", placeholder="e.g., aryan@example.com")
+            reg_name = st.text_input("Full Name", placeholder="e.g., Shreyansh Pandey")
+            reg_email = st.text_input("Email", placeholder="e.g., shreyansh@example.com")
             reg_pwd = st.text_input("Password (min 6 characters)", type="password")
             reg_confirm = st.text_input("Confirm Password", type="password")
             btn_reg = st.form_submit_button("Create My Account", type="primary", use_container_width=True)
@@ -452,7 +452,7 @@ elif nav_selection == "💳 Transactions":
             )
 
             # Delete transaction
-            del_id = st.selectbox("Select Expense ID to remove:", options=[e["id"] for e in filtered_expenses], format_func=lambda x: f"ID #{x} - {next((e['description'] or e['category']) for e in filtered_expenses if e['id']==x)} (₹{next(e['amount'] for e in filtered_expenses if e['id']==x)})")
+            del_id = st.selectbox("Select Expense ID to remove:", options=[e["id"] for e in filtered_expenses], format_func=lambda x: f"ID #{x} - {next((e['description'] or e['category']) for e in filtered_expenses if e['id'] == x)}")
             if st.button("🗑️ Delete Selected Expense", type="secondary"):
                 if delete_expense(user_id, del_id):
                     st.success("Expense transaction deleted.")
@@ -479,7 +479,7 @@ elif nav_selection == "💳 Transactions":
                 ),
                 use_container_width=True
             )
-            del_inc_id = st.selectbox("Select Income ID to remove:", options=[i["id"] for i in all_incomes], format_func=lambda x: f"ID #{x} - {next(i['source'] for i in all_incomes if i['id']==x)} (₹{next(i['amount'] for i in all_incomes if i['id']==x)})")
+            del_inc_id = st.selectbox("Select Income ID to remove:", options=[i["id"] for i in all_incomes], format_func=lambda x: f"ID #{x} - {next(i['source'] for i in all_incomes if i['id']==x)}")
             if st.button("🗑️ Delete Selected Income"):
                 if delete_income(user_id, del_inc_id):
                     st.success("Income transaction removed.")
@@ -796,7 +796,7 @@ elif nav_selection == "🧠 About AI & Viva Guide":
     1. **Q: Why use SQLite for a BCA project?**  
        *A:* SQLite is serverless, zero-configuration, lightweight, and stores tables in a single `.db` file, making it ideal for local standalone applications.
     2. **Q: Why use Linear Regression over complex Deep Learning?**  
-       *A:* Personal finance datasets for an individual typically comprise 12–24 months of aggregate data points. Deep neural networks require millions of records and would severely overfit, whereas Linear Regression is interpretable, efficient, and robust.
+       *A:* Personal finance datasets for an individual typically comprise 12–24 months of aggregate data points. Deep neural networks require millions of records and would severely overfit, whereas Linear Regression is optimal for small time-series data.
     3. **Q: How are passwords secured?**  
        *A:* Using Werkzeug's cryptographic hashing algorithms (`pbkdf2:sha256` or `scrypt`) with random salts, ensuring passwords are never stored in plain text.
     """)
