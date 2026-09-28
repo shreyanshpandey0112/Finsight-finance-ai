@@ -2,8 +2,8 @@ import { Expense, Income, Budget, Goal, User } from '../types';
 
 export const DEMO_USER: User = {
   id: 1,
-  name: 'Aryan Sharma',
-  email: 'aryan.sharma@bca.edu',
+  name: 'Shreyansh Pandey',
+  email: 'shreyanshpandey@su.edu',
   createdAt: '2025-01-10',
 };
 
