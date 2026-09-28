@@ -287,7 +287,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onLoginSuccess, onLoad
                   type="text"
                   value={regName}
                   onChange={(e) => setRegName(e.target.value)}
-                  placeholder="Aryan Sharma"
+                  placeholder="Shreyansh Pandey"
                   className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
                 />
               </div>
@@ -298,7 +298,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onLoginSuccess, onLoad
                   type="email"
                   value={regEmail}
                   onChange={(e) => setRegEmail(e.target.value)}
-                  placeholder="aryan@bca.edu"
+                  placeholder="shreyansh@su.edu"
                   className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3.5 py-2 text-xs text-white placeholder-slate-500 focus:border-emerald-500 focus:outline-none"
                 />
               </div>
